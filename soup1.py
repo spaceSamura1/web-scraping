@@ -1,9 +1,9 @@
-#Goal: Scrape data and export to txt file
+#Goal: Scraping multiple links within the same page
 
 import requests
 from bs4 import BeautifulSoup
 
-website = 'https://subslikescript.com/movie/Budapest_Noir-5161018'
+website = 'https://subslikescript.com/movies'
 
 result = requests.get(website)
 content = result.text
@@ -14,7 +14,8 @@ soup = BeautifulSoup(content, 'lxml')
 box = soup.find('article', class_='main-article')
 #box is isolationg the main content of the page
 
-title = box.find('h1').get_text()
+box.find_all('a', href=True)
+
 transcript = box.find('div', class_='full-script').get_text(strip=True, separator=' ')
 #strip removes trailing and leading spaces only at the beginning and end of the data
 #separator replaces a new line with a blank space
