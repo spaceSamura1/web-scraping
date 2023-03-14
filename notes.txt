@@ -3,3 +3,30 @@ Search for elements in this order:
 2. Class Name
 3. Tag Name / CSS Selector
 4. Xpath
+
+
+Xpath Syntax
+//tagName e.g //h1
+
+If there are multiple tags on the same page e.g three h1 tags - you can specify by appending brackets and inserting the number
+you want to isolate
+
+ex: 
+    //h1[1] --> the first h1 tag on the page
+    //h1[2] --> the second h1 tag on the page
+
+You can also use brackets to identify the values of attributes for the tag:
+//tagName[@AttributeName="Value"]
+
+Xpath Functions
+contains() --> search for text included inside an element
+starts-with() --> will search for text at the beginning of element
+
+ex:
+    //tagName[contains(@AttributeName, "Value")]
+
+Xpath Operators
+and, or
+//tagName[(expression1) and (expression2)]
+
+Xpath playground: https://scrapinghub.github.io/xpath-playground/
