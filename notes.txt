@@ -30,3 +30,13 @@ and, or
 //tagName[(expression1) and (expression2)]
 
 Xpath playground: https://scrapinghub.github.io/xpath-playground/
+
+Special Characters
+/ - select the children from the node set on the left side of this Characters
+// - Specifies that the matching node set should be located at any level within the document
+. - Returns the current node
+.. - refers to parent node
+* - wildcard that selects all elements or attributes regardless of names 
+@ - selects an attributes
+() - used for grouping an Xpath expression
+[] - index
