@@ -1,5 +1,13 @@
 Find Element by ID
-driver.fine_element_by_id('id')
+driver.find_element_by_id('id')
 
 Find Element by class name
-driver.fine_element_by_class_name('class_name')
+driver.find_element_by_class_name('class_name')
+
+Find Element by tag name
+driver.find_element_by_tag_name('tag_name')
+
+Find Element by Xpath
+driver.find_element_by_xpath('path')
+
+
